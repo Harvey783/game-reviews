@@ -28,7 +28,7 @@ class GameReviews::Scraper
         :metascore => game.css("div.metascore_w").text,
         :release_date => game.css("li.release_date span.data").text,
         :link => 'http://www.metacritic.com/' + 
-          game.css("div.product_title a").attribute("href").text
+                  game.css("div.product_title a").attribute("href").text
       })
     end
   end
