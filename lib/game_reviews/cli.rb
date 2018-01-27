@@ -15,8 +15,9 @@ class GameReviews::CLI
     end
     
     def list(name, url, score)
-      puts ""
-      puts "------------ #{name} ------------"
+      puts "----------------------------------------------------------------------"
+      puts "#{name}"
+      puts "----------------------------------------------------------------------"
       list = GameReviews::Scraper.new(url, score)
       list.clear
       list.scraper
@@ -36,8 +37,8 @@ class GameReviews::CLI
       puts ""
       puts "Type number of desired selection or Exit to quit"
       puts ""
-      
       input = gets.strip.upcase
+      
       if input != 'EXIT'
         puts ""
         puts ""
