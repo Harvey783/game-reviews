@@ -1,31 +1,5 @@
 class GameReviews::CLI
   
-    def welcome
-      puts ""
-      puts "----------------------------------------------------------------------"
-      puts " - - - - - - - - - -  REVIEWS BY METACRITIC SCORE - - - - - - - - - - "
-      puts "----------------------------------------------------------------------"
-      puts ""
-      puts "     1. All PS4 Games                   2. Latest PS4 Releases"
-      puts ""
-      puts "   3. All Xbox One Games              4. Latest Xbox One Releases"
-      puts ""
-      puts " 5. All Nintendo Switch Games      6. Latest Nintendo Switch Releases"
-      puts ""
-    end
-    
-    def list(name, url, score)
-      puts "----------------------------------------------------------------------"
-      puts "#{name}"
-      puts "----------------------------------------------------------------------"
-      list = GameReviews::Scraper.new(url, score)
-      list.clear
-      list.scraper
-      list.display
-      puts ""
-      start
-    end
-    
     def call
       start
     end
@@ -82,6 +56,32 @@ class GameReviews::CLI
         when "EXIT"
           exit == true
       end
+      end
     end
+  
+  def welcome
+    puts ""
+    puts "----------------------------------------------------------------------"
+    puts " - - - - - - - - - -  REVIEWS BY METACRITIC SCORE - - - - - - - - - - "
+    puts "----------------------------------------------------------------------"
+    puts ""
+    puts "     1. All PS4 Games                   2. Latest PS4 Releases"
+    puts ""
+    puts "   3. All Xbox One Games              4. Latest Xbox One Releases"
+    puts ""
+    puts " 5. All Nintendo Switch Games      6. Latest Nintendo Switch Releases"
+    puts ""
+  end
+  
+  def list(name, url, score)
+    puts "----------------------------------------------------------------------"
+    puts "#{name}"
+    puts "----------------------------------------------------------------------"
+    list = GameReviews::Scraper.new(url, score)
+    list.clear
+    list.scraper
+    list.display
+    puts ""
+    start
   end
 end
