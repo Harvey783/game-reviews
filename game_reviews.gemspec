@@ -8,7 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = GameReviews::VERSION
   spec.authors       = ["Chris Harvey"]
   spec.email         = ["chharvey@icloud.com"]
+  
   spec.summary       = 'Videogames by Metacritic Score'
+  spec.description   = "This gem returns a list of games based on a defined minimum Metacritic Score for consoles over two date ranges: recent or alltime."
   spec.homepage      = "https://github.com/Harvey783/game-reviews"
   spec.license       = "MIT"
 
@@ -21,10 +23,9 @@ Gem::Specification.new do |spec|
       "public gem pushes."
   end
 
-  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
-    f.match(%r{^(test|spec|features)/})
+  spec.files         = ["lib/game_reviews.rb", "lib/game_reviews/cli.rb", "lib/game_reviews/reviews.rb", "lib/game_reviews/scraper.rb", "lib/game_reviews/version.rb"]
   end
-  spec.bindir        = "exe"
+  spec.bindir        = "bin"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
