@@ -16,8 +16,8 @@ Gem::Specification.new do |spec|
 
 
   spec.files         = ["lib/game_reviews.rb", "lib/game_reviews/cli.rb", "lib/game_reviews/reviews.rb", "lib/game_reviews/scraper.rb", "lib/game_reviews/version.rb"]
-  
-  spec.executables   = 'game_reviews'
+  spec.bindir        = "bin"
+  spec.executables   = 'reviews'
 
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"
