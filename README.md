@@ -4,25 +4,13 @@ This gem returns a list of games based on a defined minimum Metacritic Score for
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'game_reviews'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
     $ gem install game_reviews
 
 ## Usage
 
 Type the below and follow the on screen prompts.
 
-$ game_reviews
+    $ reviews
 
 ## Development
 
