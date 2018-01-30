@@ -14,19 +14,11 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/Harvey783/game-reviews"
   spec.license       = "MIT"
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
 
   spec.files         = ["lib/game_reviews.rb", "lib/game_reviews/cli.rb", "lib/game_reviews/reviews.rb", "lib/game_reviews/scraper.rb", "lib/game_reviews/version.rb"]
-  end
+  
   spec.bindir        = "bin"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.executables   = 'game_reviews'
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.11"

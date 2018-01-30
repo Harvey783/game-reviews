@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-Enter the below command after Installation and follow the on screen prompts.
+Type the below and follow the on screen prompts.
 
 $ game_reviews
 
