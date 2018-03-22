@@ -1,6 +1,6 @@
 # Game Reviews
 
-This gem returns a list of games based on a defined minimum Metacritic Score for consoles over two possible date ranges: recent or alltime.
+This gem returns a list of games based on their Metacritic Score for consoles over two possible date ranges: recent or alltime.
 
 ## Installation
 

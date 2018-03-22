@@ -7,14 +7,14 @@ class GameReviews::Scraper
     @score = score
   end
   
-  @@games = []
+  @@all = []
   
-  def self.games
-    @@games 
+  def self.all
+    @@all 
   end 
 
   def clear
-    @@games.clear
+    @@all.clear
   end
   
 
@@ -23,7 +23,7 @@ class GameReviews::Scraper
    
     game_list.css("ol.list_products li.game_product").each do |game|
 
-      @@games << GameReviews::Reviews.new({
+      @@all << GameReviews::Reviews.new({
         :title => game.css("div.product_title a").text.strip,
         :metascore => game.css("div.metascore_w").text,
         :release_date => game.css("li.release_date span.data").text,
@@ -34,7 +34,7 @@ class GameReviews::Scraper
   end
 
   def display
-    @@games.delete_if{|game| game.metascore.to_i < @score.to_i}.each_with_index do |game, i|
+    @@all.delete_if{|game| game.metascore.to_i < @score.to_i}.each_with_index do |game, i|
       puts "  \n#{i+1}. #{game.title} \n    
       Metascore: #{game.metascore}    
       Release Date: #{game.release_date}    

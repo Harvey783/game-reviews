@@ -1,6 +1,6 @@
 class GameReviews::Reviews
 	
-	attr_accessor :title, :metascore, :release_date, :link
+  attr_accessor :title, :metascore, :release_date, :link
 
 	def initialize(details = {})
 		@title = details[:title]
